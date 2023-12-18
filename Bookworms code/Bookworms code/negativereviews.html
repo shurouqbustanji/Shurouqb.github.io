@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en"> 
+
+<head>
+    <link rel="stylesheet" type="text/css" href="default.css" title="default">
+    <link rel="alternate stylesheet" type="text/css" href="alternative.css" title="alternative">
+    <script>
+        function switchStyle(styleName) {
+            var i, linkTag;
+            for (i = 0, linkTag = document.getElementsByTagName("link"); i < linkTag.length; i++ ) {
+                if ((linkTag[i].rel.indexOf( "stylesheet" ) !== -1) && linkTag[i].title) {
+                    linkTag[i].disabled = true;
+                    if (linkTag[i].title === styleName) {
+                        linkTag[i].disabled = false;
+                    }
+                }
+            }
+        }
+    </script>
+    </head>
+
+<body>
+    <nav>
+        <a href="index.html">Home</a> 
+        <a href="form.html">Form</a>
+        <a href ="allreviews.html">All reviews</a>
+        <a href="positivereviews.html">Positive reviews</a>
+        <a href="negativereviews.html">Negative reviews</a>
+    </nav>
+    <button onclick="switchStyle('alternative')">Switch to Alternative Stylesheet</button>
+    <button onclick="switchStyle('default')">Switch to Default Stylesheet</button>
+
+    <div class="container">
+<h2> Negative book reviews: </h2>
+<ul>
+  <li><a href="#little-life">A Little Life</a></li>
+  <li><a href="#man's-search-for-meaning">Man's Search For Meaning</a></li>
+</ul>
+
+<div id="little-life"></div>
+<h3>A Little Life</h3>
+<p>A novel published by Hanya Yanagihara. This novel has a clear target audience,
+  and it is young adults who are beginning to learn about mental health and trauma; teenagers
+  who find mental illness “cool” and want to read self-destructive fiction. Although it’s supposed
+  to be non-linear storytelling, it came off to be a messy strange pacing of actions. I would not
+  recommend this book to anyone.</p>
+
+  <h5>A little life cover art</h5>
+  <a href="LittleLife.jpg">
+    <img src="LittleLife.jpg" alt="Little Life book-cover" style="width:100px;height:auto;">
+    </a>
+
+  <div id="man's-search-for-meaning"></div>
+  <h3>Man's Search For Meaning</h3>
+  <p>One of Viktor Frankl’s most popular work. As a usual hater of self
+    help book with some exceptions, this book unfortunately was not one of them. From his
+    wording common sense in attractive words to his victim complex, Viktor Frankl did not impress
+    me with his “wisdom”. It is one of those books you keep hearing amazing things about just to be
+    disappointed and realize it only got popular for talking about real problems.</p>
+
+    <h5>One of the cover arts done by artists:</h5>
+    <a href="Mansearch.jpg">
+    <img src="Mansearch.jpg" alt="Man's Search For Meaning book-cover" style="width:100px;height:auto;">
+    </a>
+
+    </div>
+    </body>
+    </html>

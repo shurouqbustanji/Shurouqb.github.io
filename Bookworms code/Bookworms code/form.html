@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">  
+
+<head>
+    <link rel="stylesheet" type="text/css" href="default.css" title="default">
+    <link rel="alternate stylesheet" type="text/css" href="alternative.css" title="alternative">
+    <script>
+        function switchStyle(styleName) {
+            var i, linkTag;
+            for (i = 0, linkTag = document.getElementsByTagName("link"); i < linkTag.length; i++ ) {
+                if ((linkTag[i].rel.indexOf( "stylesheet" ) !== -1) && linkTag[i].title) {
+                    linkTag[i].disabled = true;
+                    if (linkTag[i].title === styleName) {
+                        linkTag[i].disabled = false;
+                    }
+                }
+            }
+        }
+    </script>
+    
+    </head>
+
+    <body>
+        <div class="container">
+            <nav>
+                <a href="index.html">Home</a> 
+                <a href="form.html">Form</a>
+                <a href ="allreviews.html">All reviews</a>
+                <a href="positivereviews.html">Positive reviews</a>
+                <a href="negativereviews.html">Negative reviews</a>
+            </nav>
+            <button onclick="switchStyle('alternative')">Switch to Alternative Stylesheet</button>
+            <button onclick="switchStyle('default')">Switch to Default Stylesheet</button>
+
+<form action="/submit_form">
+    <h2>About you</h2>
+    <div>
+    <p>What's your favorite Genre?</p>
+    <input type="radio" id="philosophy" name="genre" value="philosophy">
+    <label for="philosophy">Philosophy</label><br>
+    <input type="radio" id="horror" name="genre" value="horror">
+    <label for="horror">Horror</label><br>
+    <input type="radio" id="classics" name="genre" value="classics">
+    <label for="classics">Classics</label> <br>
+    <input type="radio" id="other" name="genre" value="other">
+    <label for="other">Other</label><br>
+</div>
+
+<div>
+    <label for="feedback">What would you like to see more of?</label><br>
+    <textarea id="feedback" name="feedback" rows="4" cols="50"> 
+    </textarea>
+</div>
+
+<div>
+    <label for="email">Would you like to sign up to our news letter? If so, please submit your Email:</label><br>
+    <input type="text" id="email" name="email" size="30"><br>
+</div>
+
+<div>
+    <input type="submit" value="Submit">
+    <input type="reset" value="Reset">
+</div>
+
+<div>
+    <label for="recommend">Would you recommend this website to a friend?</label><br>
+    <input type="checkbox" id="recommend" name="recommend" value="yes">
+    <label for="recommend">Yes, I would!</label><br>
+  </div>
+  
+
+</form>
+</div>
+    </body>
+    </html>

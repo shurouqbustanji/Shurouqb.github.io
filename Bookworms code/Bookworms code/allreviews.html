@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">  
+
+<head>
+  <link rel="stylesheet" type="text/css" href="default.css" title="default">
+  <link rel="alternate stylesheet" type="text/css" href="alternative.css" title="alternative">
+  <script>
+    function switchStyle(styleName) {
+        var i, linkTag;
+        for (i = 0, linkTag = document.getElementsByTagName("link"); i < linkTag.length; i++ ) {
+            if ((linkTag[i].rel.indexOf( "stylesheet" ) !== -1) && linkTag[i].title) {
+                linkTag[i].disabled = true;
+                if (linkTag[i].title === styleName) {
+                    linkTag[i].disabled = false;
+                }
+            }
+        }
+    }
+</script>
+
+        </head>
+
+    <body>
+        <div class="container">
+            <nav>
+                <a href="index.html">Home</a> 
+                <a href="form.html">Form</a>
+                <a href ="allreviews.html">All reviews</a>
+                <a href="positivereviews.html">Positive reviews</a>
+                <a href="negativereviews.html">Negative reviews</a>
+            </nav>
+            <button onclick="switchStyle('alternative')">Switch to Alternative Stylesheet</button>
+            <button onclick="switchStyle('default')">Switch to Default Stylesheet</button>
+
+
+ <section id="reviews">
+  <h2> All book reviews: </h2>
+      <ul>
+        <li><a href="#dorian-gray">The Picture Of Dorian Gray</a></li>
+        <li><a href="#metamorphosis">The Metamorphosis</a></li>
+        <li><a href="#little-life">A Little Life</a></li>
+        <li><a href="#one-no-one-a-hundred-thousand">One, No One, A Hundred Thousand </a></li>
+        <li><a href="#man's-search-for-meaning">Man's Search For Meaning</a></li>
+      </ul>
+   
+      <div id="dorian-gray"></div>
+      <article>
+      <h3>The Picture of Dorian Gray</h3>
+      <p> A timeless Oscar Wilde gothic philosophical novel, although it was
+        written in 1891, it battles problems in society that are as widespread as they were in the 19 th
+        century; by the main character breaking the norm of what’s expected in high society. If I could
+        take away one moral from this book it would be not to excess in anything as it brings its own
+        punishment.</p>
+      </article>
+
+        <h5>One of the cover arts done by artists:</h5>
+        <a href="DorianGray.jpg">
+          <img src="DorianGray.jpg" alt="Dorian Gray book-cover" style="width:100px;height:auto;">
+          </a>
+          <a href="https://en.wikipedia.org/wiki/The_Picture_of_Dorian_Gray">More about Picture of Dorian Gray</a>
+
+
+        <div id="metamorphosis"></div>
+        <article>
+        <h3>The Metamorphosis</h3>
+        <p> A metaphorical fiction written by Franz Kafka, the best thing about this
+          novel is that it could be interpreted in many ways; the author has given us readers the space
+          and ability to personalize the morals taken away from it.</p>
+        </article>
+
+          <h5>Art inspired by The Metamorphosis:</h5>
+          <a href="Metamorphosis.jpg">
+            <img src="Metamorphosis.jpg" alt="Metamorphosis book-cover" style="width:100px;height:auto;">
+            </a>
+            <a href="https://en.wikipedia.org/wiki/The_Metamorphosis">More about Metamorphosis</a>
+
+          <p>An interesting fact about Metamorphosis is that Kafka never intended for the creature in the
+          book to be drawn out; so that we could all have our own interpretation from our imagination,
+          but this wouldn’t be the first-time people go against his wishes; another fun fact is that he also
+          wanted all his writings to be burned as his death-wish. Thankfully his brother didn’t listen. </p>
+
+          <p>Have you ever read this book before?</p>
+          <form>
+            <input type="checkbox" id="yesCheckbox" name="yesCheckbox">
+            <label for="yesCheckbox">Yes</label><br>
+            <input type="checkbox" id="noCheckbox" name="noCheckbox">
+            <label for="noCheckbox">No</label><br>
+          </form>
+          
+
+
+            <div id="one-no-one-a-hundred-thousand"></div>
+            <h3>One, No One, A Hundred Thousand </h3>
+            <p>Luigi’s Pirandell’s most influential novel, delves deep into
+              identity crises and how us humans can get so caught up in how people see us versus how we
+              see ourselves. It has a very interesting plot with an exciting flow that will definitely keep you
+              hooked enough to finish it in one sitting; a guy who gets a crisis thinking about how many
+              different perceptions of himself exist, within himself and other people.</p>
+
+              <h5>An example of its cover art:</h5>
+              <a href="OneNoOne.jpg">
+                <img src="OneNoOne.jpg" alt="One No One A Hundred Thousand book-cover" style="width:100px;height:auto;">
+                </a>
+                <a href="https://en.wikipedia.org/wiki/One,_No_One_and_One_Hundred_Thousand">More about One No One A Hundred Thousand</a>
+
+
+              <p>You can even find free audiobooks on Youtube for some books including One No One A Hundred Thousand, you can listen to it here:</p>
+              <iframe width="560" height="315" src="https://www.youtube.com/embed/IizH68Ud-2M" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+              <div id="little-life"></div>
+<h3>A Little Life</h3>
+<p>A novel published by Hanya Yanagihara. This novel has a clear target audience,
+  and it is young adults who are beginning to learn about mental health and trauma; teenagers
+  who find mental illness “cool” and want to read self-destructive fiction. Although it’s supposed
+  to be non-linear storytelling, it came off to be a messy strange pacing of actions. I would not
+  recommend this book to anyone.</p>
+
+  <h5>A little life cover art</h5>
+  <a href="LittleLife.jpg">
+    <img src="LittleLife.jpg" alt="A Litte Life book-cover" style="width:100px;height:auto;">
+    </a>
+
+  <div id="man's-search-for-meaning"></div>
+  <h3>Man's Search For Meaning</h3>
+  <p>One of Viktor Frankl’s most popular work. As a usual hater of self
+    help book with some exceptions, this book unfortunately was not one of them. From his
+    wording common sense in attractive words to his victim complex, Viktor Frankl did not impress
+    me with his “wisdom”. It is one of those books you keep hearing amazing things about just to be
+    disappointed and realize it only got popular for talking about real problems.</p>
+
+    <h5>One of the cover arts done by artists:</h5>
+    <a href="Mansearch.jpg">
+      <img src="Mansearch.jpg" alt="Man's Search For Meanings book-cover" style="width:100px;height:auto;">
+      </a>
+    </section>
+    </div>
+    </body>
+    </html>

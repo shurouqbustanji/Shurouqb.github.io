@@ -1,0 +1,15 @@
+<link rel="stylesheet" type="text/css" href="default.css" title="default">
+<link rel="alternate stylesheet" type="text/css" href="alternative.css" title="alternative">
+<script>
+    function switchStyle(styleName) {
+        var i, linkTag;
+        for (i = 0, linkTag = document.getElementsByTagName("link"); i < linkTag.length; i++ ) {
+            if ((linkTag[i].rel.indexOf( "stylesheet" ) !== -1) && linkTag[i].title) {
+                linkTag[i].disabled = true;
+                if (linkTag[i].title === styleName) {
+                    linkTag[i].disabled = false;
+                }
+            }
+        }
+    }
+</script>

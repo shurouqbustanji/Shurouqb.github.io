@@ -1,0 +1,66 @@
+
+
+a {
+    color: blue;
+}
+
+a.clicked {
+    color: purple;
+}
+
+            body {
+    font-family: Arial, sans-serif;
+
+    font-size: 1em;
+}
+
+p {
+    font-size: 0.8em;
+}
+
+body {
+position: relative;
+}
+body::before {
+content: "";
+position: absolute;
+top: 0;
+right: 0;
+bottom: 0;
+left: 0;
+background-image: url("https://media.istockphoto.com/id/1016115404/hu/fot%C3%B3/k%C3%B6nyvek.jpg?s=2048x2048&w=is&k=20&c=fWlZyrgWvXSbJ0Ps3EWHSz3KXdzqnN8xHdwF4o4KDRI=");
+background-repeat: no-repeat;
+background-size: cover;
+opacity: 0.5; 
+z-index: -1; 
+}
+.container {
+ width: 50%; 
+ margin-left: 5%;
+    margin-right: auto;
+    border-left: 2px solid lightseagreen; 
+    border-right: 2px solid lightseagreen;
+}
+@media screen and (min-width: 768px) {
+    body {
+        font-size: 1.2em;
+    }
+    p {
+        font-size: 1em;
+    }
+    .container {
+        width: 70%;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    body {
+        font-size: 1.4em;
+    }
+    p {
+        font-size: 1.2em;
+    }
+    .container {
+        width: 80%;
+    }
+}
